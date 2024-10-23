@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "Px23FZdcV9jMQAo+Do1v3kx0HVZKPg+KQAis8zVWD5DTvI+0o0I9swwBXjAHdYDURQz5M8kmEGStwkx0Xtgh6A==",
+  "success": true,
+  "projectFilePath": "/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/TheFrozenDesert.csproj",
+  "expectedPackageFiles": [
+    "/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Nuget/autofac/5.2.0/autofac.5.2.0.nupkg.sha512",
+    "/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Nuget/monogame.content.builder.task/3.8.0.1641/monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Nuget/monogame.extended/3.8.0/monogame.extended.3.8.0.nupkg.sha512",
+    "/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Nuget/monogame.extended.content.pipeline/3.8.0/monogame.extended.content.pipeline.3.8.0.nupkg.sha512",
+    "/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Nuget/monogame.extended.graphics/3.8.0/monogame.extended.graphics.3.8.0.nupkg.sha512",
+    "/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Nuget/monogame.extended.tiled/3.8.0/monogame.extended.tiled.3.8.0.nupkg.sha512",
+    "/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Nuget/monogame.framework.desktopgl/3.8.0.1641/monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512",
+    "/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Nuget/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Nuget/optimizedpriorityqueue/5.1.0/optimizedpriorityqueue.5.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

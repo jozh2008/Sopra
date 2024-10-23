@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Content/Music/baum_abbauen.wav</SourceFile>
+  <SourceTime>2022-01-26T10:29:24.452165+01:00</SourceTime>
+  <DestFile>/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Content/bin/DesktopGL/Music/baum_abbauen.xnb</DestFile>
+  <DestTime>2022-01-28T10:55:55.2344139+01:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2020-08-10T16:17:54+02:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2020-08-10T16:17:54+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

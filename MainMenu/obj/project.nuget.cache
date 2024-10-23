@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HwX5QfHrC35JTKavGPOXDaU+5TTS4YTL5ThHxtdk72If63CI1PV8zplnpHO6b7gaV++hGxjWKlN4PcVvvF6V6g==",
+  "success": true,
+  "projectFilePath": "/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/MainMenu/MainMenu.csproj",
+  "expectedPackageFiles": [
+    "/home/tobi/.nuget/packages/monogame.content.builder.task/3.8.0.1641/monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "/home/tobi/.nuget/packages/monogame.framework.desktopgl/3.8.0.1641/monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+  ],
+  "logs": []
+}

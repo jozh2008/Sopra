@@ -1,0 +1,11 @@
+{
+  "$type": "TheFrozenDesert.Storage.Models.AchievementsModel, TheFrozenDesert",
+  "mKeyKing": false,
+  "mRaceToTheNorthPole": false,
+  "mVictory": false,
+  "mFirstKill": true,
+  "mWood": true,
+  "mHardcore": false,
+  "mMetal": true,
+  "mTenKills": false
+}

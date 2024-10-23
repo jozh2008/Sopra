@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/MainMenu/Content/Controls/Background.jpg","/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/MainMenu/Content/bin/DesktopGL/Content/Controls/Background.xnb","TextureProcessor","Texture2DContent",50875,1044253,0.369791
+"/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/MainMenu/Content/Controls/knopf.png","/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/MainMenu/Content/bin/DesktopGL/Content/Controls/knopf.xnb","TextureProcessor","Texture2DContent",440,79509,0.0275408

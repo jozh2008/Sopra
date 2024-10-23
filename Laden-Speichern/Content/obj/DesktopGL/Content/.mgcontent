@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/Laden-Speichern/Content/Background.jpg</File>
+    <File>/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/Laden-Speichern/Content/Controls/Background.jpg</File>
+    <File>/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/Laden-Speichern/Content/Controls/knopf.png</File>
+    <File>/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/Laden-Speichern/Content/Fonts/Font.spritefont</File>
+    <File>/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/Laden-Speichern/Content/Fonts/Fonts.spritefont</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

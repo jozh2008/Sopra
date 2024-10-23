@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/tobi/.dotnet/store/|arch|/|tfm|",
+      "/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Nuget"
+    ]
+  }
+}

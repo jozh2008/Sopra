@@ -1,0 +1,38 @@
+[
+  {
+    "PlayerName": "Bob",
+    "Highscore": 22
+  },
+  {
+    "PlayerName": "Piet",
+    "Highscore": 5
+  },
+  {
+    "PlayerName": "Josh",
+    "Highscore": 2
+  },
+  {
+    "PlayerName": "Josh",
+    "Highscore": 1
+  },
+  {
+    "PlayerName": "Josh",
+    "Highscore": 1
+  },
+  {
+    "PlayerName": "Piet",
+    "Highscore": 1
+  },
+  {
+    "PlayerName": "Piet",
+    "Highscore": 0
+  },
+  {
+    "PlayerName": "Piet",
+    "Highscore": 0
+  },
+  {
+    "PlayerName": "Josh",
+    "Highscore": 0
+  }
+]

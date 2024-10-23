@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Content/Music/Radio_rauschen.wav</SourceFile>
+  <SourceTime>2022-02-09T14:04:16.1312702+01:00</SourceTime>
+  <DestFile>/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/TheFrozenDesert/Content/bin/DesktopGL/Music/Radio_rauschen.xnb</DestFile>
+  <DestTime>2022-02-11T20:33:30.6165185+01:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2020-08-10T16:17:54+02:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2020-08-10T16:17:54+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

@@ -1,0 +1,22 @@
+{
+  "$type": "TheFrozenDesert.Storage.Models.GameDataModel, TheFrozenDesert",
+  "FleischCount": 0,
+  "MetallCount": 40,
+  "WoodCount": 60,
+  "KillCount": 0,
+  "KeyCount": 0,
+  "Timer": 0.0,
+  "EnemyFleischCount": 0,
+  "EnemyMetallCount": 40,
+  "EnemyWoodCount": 60,
+  "Tools": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib",
+    "Holzaxt": 0,
+    "Metallaxt": 0,
+    "Holzschwert": 0,
+    "Metallschwert": 0,
+    "Holzbogen": 0,
+    "Metallbogen": 0,
+    "Metallruestung": 0
+  }
+}

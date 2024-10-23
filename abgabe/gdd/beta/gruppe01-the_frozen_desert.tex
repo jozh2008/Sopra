@@ -1,0 +1,520 @@
+ %Template: Fabian Wenzelmann, 2016 - 2019
+
+\documentclass[a4paper,
+  twoside, % to have to sided mode
+  headlines=2.1 % number of lines in the heading, increase if you want more
+  ]{scrartcl}
+\usepackage[
+  margin=2cm,
+  includefoot,
+  footskip=35pt,
+  includeheadfoot,
+  headsep=0.5cm,
+]{geometry}
+\usepackage[utf8]{inputenc}
+% \usepackage[ngerman]{babel} % uncomment this line instead of the next one when writing in German
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage[automark,headsepline]{scrlayer-scrpage}
+\usepackage{enumerate}
+\usepackage[protrusion=true,expansion=true,kerning]{microtype} % just looks much nicer with this
+\usepackage{ tipa }
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{float}
+
+%\newcommand{\yourname}{Birk Ramin \\ \texttt{4735273}} % Add more authors with the \and command
+ \newcommand{\yourname}{Tobias Vonier \and Henry Frey \and Drilon Gashi \and
+ Joshua Scheler \and Robin Sigmund \and Hendrik Jansen \and Judi Hamdo \\
+ Tutor: Gerrit Freiwald} % Here an example with matriculation numbers. If you use newlines adjust the command \headingname (don't use new lines there)
+\newcommand{\headingname}{\gamename} % Names as they appear in the heading. For example use only surnames when too long
+% \newcommand{\headingname}{Dein Name, Anderer Name} % This is an exmaple of a nicely formatted list
+\newcommand{\lecture}{GDD WS21/22 Sopra 01}
+\newcommand{\gamename}{The Frozen Desert} % Name of the Game
+\author{\yourname}
+\title{\gamename}
+% \subtitle{Exercise Sheet \sheetnum}
+\subtitle{\lecture} % German version
+\date{\today} % If you want a date add it here (simply use \today for the current date)
+
+% Page heading definitions
+\pagestyle{scrheadings}
+\setkomafont{pagehead}{\normalfont}
+\lohead{\gamename}
+\lehead{\gamename}
+\rohead{\lecture} % German version
+\rehead{\lecture} % German version
+
+
+\begin{document}
+
+\maketitle
+\newpage
+\tableofcontents
+
+\section{Spielkonzept}
+
+	\subsection{Zusammenfassung Spiel}
+	Niemand erinnert sich an die Zeit vor dem Eis. Die Kälte ist ständiger Begleiter, im Leben und meist auch im Tod. 
+	Viele Menschen gibt es nicht mehr. Einzelne Nomadenstämme ziehen durch den Schnee, in einem ständigen Kampf um Nahrung, Ressourcen und allem voran Wärme.
+	Du musst eine Gruppe durch die Eiswüste führen. Du hältst sie warm. Du füllst ihre Mägen. Doch reines Überleben ist nicht das Ziel. 
+	Es gibt Hoffnung, die Kälte zu bezwingen. Folge den Gerüchten über einen gigantischen Reakto, der das Zeitalter des Eises beenden kann.
+
+	\subsection{Zentrale Spielmechanik}
+		Um die eingefrorene Welt wieder aufzutauen, muss der Spieler seine
+		eigene Armee von Einheiten aufbauen und diese stetig weiterentwickeln. Dazu
+		fährt der Spieler mit seinen Schlitten, auf dem sich die gesammelten Ressourcen
+		befinden, durch die zugefrorene Landschaft. Hier muss der Spieler seine Einheiten effektiv einsetzen um
+		verschiedene Rätsel und Gegner unter Zeitdruck zu überwinden.
+\section{Benutzeroberfläche}
+	\subsection{Spielerinterface}
+	     Das Spiel wird aus der Vogelperspektive und in 2D gespielt. Am Rand wird angezeigt, wie viele Ressourcen der Spieler aktuell hat. Das restliche Spielerinterface besteht aus Menüs, die sich öffnen, wenn man 
+ein Objekt anwählt.
+\begin{itemize}
+\item Bei einer Einheit öffnet sich ein Menü, indem man die zugehörigen 
+Eigenschaften (Wärme und Nahrung) angezeigt kriegt. Zudem sieht man die 
+von der Einheit ausgerüsteten Gegenstände.
+\item Bei dem Schlitten öffnet sich ein Menü mit allen bereits gebauten 
+Segmenten. Für jedes Segment können verschiedene Sachen hergestellt und 
+verwaltet werden
+\end{itemize}
+		
+	\subsection{Menüstruktur}
+	Es gibt das Startmenü. Dieses enthält 6 Unterpunkte. Diese wären Neues Spiel, Spiel Laden, Optionen, Achievements und Beenden. Jeder Unterpunkt  
+	\begin{itemize}
+	    \item Neues Spiel: Startet ein neues Spiel
+	    \item Spiel Laden: Kann aus 5 Spielständen ein Spiel laden
+	    \item Optionen: Sound einstellen bzw. Lautstärke, Techdemo
+	    \item Achievements: Man sieht die Achviements die man noch nicht geschafft hat und die, die man geschafft hat
+	    \item Statistik: Man hat eine Gesamtstatistik. Dort wird die Anzahl der Siege, Gespielte Gesamtzeit und schnellster Sieg  aufgelistet.
+	    \item Beenden: Man beendet das Spiel
+	\end{itemize}
+	Es gibt noch ein Spielmenü. Dieses enthält 6 Unterpunkte. Diese wären Speichern, Startmenü, Optionen, Spiel fortsetzen, Statistik und Achievements.
+	\begin{itemize}
+	    \item Speichern: Man speichert das Spiel.
+	    \item Startmenü: Hier gelangt man zum Startmenü.
+	    \item Optionen: Hier gelangt man zu den Optionen.
+	    \item Spiel fortsetzen: Man spielt weiter.
+	    \item Statistik: Hier gelangt man zu der In-Game Statistik. In-Game Statistik ist: Spielzeit, Ressourcen, Besiegte Gegner
+	    \item Achievements: hier gelangt man zum Achievements-Menü
+	\end{itemize}
+	Außerdem gibt es noch ein Schlittenmenü. Hier sieht man die Verschiedenen Segmente, die man besitzt. Man kann hier weitere Segmente bauen und diese mit unterschiedlich ausstatten, wenn man die benötigen Ressourcen hat.
+	Manche Segmente haben ein eigenes kleines Menü. 
+	\begin{itemize}
+	    \item Im Menü der Schmiede und Werkbank kann man aus einer Liste auswählen, welche Gegenstände man herstellen will. Werkzeuge die aufgrund mangelnder Ressourcen nicht gebaut werden können, werden rot markiert.
+	    \item Im Menü des Kamins kann man diesen ein- und ausschalten.
+	    \item Im Menü der Küche kann man auswählen, wie viel Nahrung man herstellen will.
+	\end{itemize}
+	
+	    \begin{figure}[H]
+	        \centering
+	       % \includegraphics[scale=1]{content/Menu_Sopra}
+	        \caption{Skizze der Menüstruktur}
+	        \label{pic:Menu}
+	    \end{figure}
+	   
+
+\section{Technische Merkmale}
+	\subsection{Technologien}
+	\begin{itemize}
+	    \item Programmiersprache: C\# (Version: 8.0)
+	    \item Framework: Monogame
+	    \item IDE: VisualStudio, JetBrains Rider
+	    \item Code Analyse: Resharper
+	    \item Ton: FL Studio
+	    \item Graphik: Gimp, Krita
+	    \item .NET Core 3.1
+	\end{itemize}
+	\subsection{Mindestvorraussetzungen}
+    \begin{itemize}
+					\item Betriebssystem: Windows 10
+					\item Monitor mit einer Auflösung von mindestens 1024x768 Bildpunkten
+					\item .NET Core 3.1
+					\item Dual-Core Prozessor mit mindestens 2.0 GHz
+					\item 4 GB RAM
+					\item Grafikkarte mit mindestens Shader Model 2.0
+					\item Maus und Tastatur
+					%\item Internetverbindung mit mindestens 1 Mbit/s  Übertragungsgeschwindigkeit
+	\end{itemize}
+\section{Spiellogik}
+	\subsection{Spielobjekte}
+	Es gibt verschiedene Spielobjekte, die in der Spielwelt existieren.
+		\subsubsection {Einheiten}
+		Einheiten können sich über die meisten Felder der Spielwelt bewegen. Entweder werden Einheiten von den Spielern kontrolliert oder vom Computer.  Einheiten können einer Gruppe angehören. Einheiten einer Gruppe greifen sich niemals an. Wenn eine Einheit einer Gruppe einen Angriff startet, greifen auch alle anderen Einheiten dieser Gruppe an.
+		\begin{itemize}
+		    \item Mensch:
+				Menschen sind Einheiten, die entweder vom menschlichen Spieler gesteuert werden können, 				oder vom Computer gesteuerten Spieler. 	
+				\\Jeder Mensch besitzt eine der folgenden Fähigkeiten:
+					\begin{itemize}
+					\item Nahkampf
+					\item Fernkampf
+					\item Sammler/Bauen
+					\end{itemize}
+				Unterschiedliche Menschen sind visuell unterscheidbar. 
+				Am Anfand des Spieles beginnt jeder Spieler mit drei Einheiten Mensch mit Fähigkeit 						Sammen/Bauen.
+				Menschen können entweder als Objekte in der Spielwelt existieren, oder sich im 							Schlitten befinden.
+			\item Tier: 
+				Tiere bewegen sich allein oder im Rudel zufällig durch die Karte. 
+				Sie werden abhängig von ihrer Art allein oder in verschieden großen Rudeln zufällig gespawnt. \\
+				Arten:
+				\begin{itemize}
+					\item Wolf: Im Rudel, mittlere Angriffswahrscheinlichkeit.
+					\item Bär: Einzelgänger, hohe Angriffswahrscheinlichkeit.
+					\item Reh: Im Rudel, keine Angriffswahrscheinlichkeit.
+					\item Wildschwein: Im Rudel, geringe Angriffswahrscheinlichkeit.
+				\end{itemize}
+			
+		\end{itemize}
+			\subsubsection {Ausrüstung}
+			 Einheiten können über das Menü einer Einheit ausgerüstet werden. Dabei 
+				muss sich die Einheit beim Schlitten befinden (da dort alle Gegenstände 
+				gelagert werden).
+			    \begin{itemize}
+			        \item Axt:
+					Werkzeug zum Abbauen von Bäumen und Felsen. 
+					Kann zum Angriff genutzt werden. 
+					Kann von Menschen getragen werden.
+					 \\
+					Mögliche Materialien:
+					\begin{itemize}
+						\item Eis (Besonderheit: Zustandswert sinkt auf warmen Feldern)
+						\item Holz
+						\item Metall
+					\end{itemize}
+					
+				    \item Schwert:
+					Waffe mit dem andere Einheiten angegriffen werden können. 
+					Kann auch zum Abbauen von Bäumen genutzt werden. 
+					Kann von Menschen getragen werden. \\
+					Mögliche Materialien:
+					\begin{itemize}
+						\item Eis (Besonderheit: Zustandswert sinkt auf warmen Feldern)
+						\item Holz
+						\item Metall
+					\end{itemize}
+					
+				    \item Bogen:
+					Waffe mit der andere Einheiten angegriffen werden können. Schießt ein Projektil welches auf große Distanz treffen kann. 
+					Die Trefferwahrscheinlichkeit sinkt mit steigender Distanz zum Ziel. Kann von Menschen getragen werden. \\
+					Mögliche Materialien:
+					\begin{itemize}
+						\item Holz
+						\item Metall
+					\end{itemize}
+					
+				    \item Verbandskasten: Kann zum Heilen von Einheiten verwendet werden.
+				    
+				    \item Kleidung:
+					Kleidung kann von Menschen getragen werden. Durch das tragen von Kleidung erhalten Einheiten einen Bonus auf Wärmeverlust und Schaden durch Angriffe. Ein Mensch kann nur eine Kleidung tragen.\\
+					Mögliche Materialien:
+					\begin{itemize}
+					    \item Leder
+					    \item Pelz
+					    \item Metall
+					\end{itemize}
+				\end{itemize}
+			Die Fähikgeit ist verbunden mit den Ausrüstungsgegenständen. Ein Sammler besitzt eine Axt. Ein Nahkämpfer besitzt ein Schwert, und ein Fernkämpfer besitzt einen Bogen. Menschen können ihre Fähigkeit auch ändern, indem sie zu einem anderen Ausrüstungsgegenstand wechseln. Dazu muss sich der neue Ausrüstungsgegenstand im Inventar befinden.  Jedoch kann ein Mensch nur immer eine aktive Fähikgeit besitzen.  
+			\subsubsection {Umwelt}
+			\begin{itemize}
+    			\item Spielfeld: 
+    			Die Spielkarte setzt sich aus Spielfeldern zusammen. Auf diesen Feldern kann sich immer nur ein Objekt befinden.
+				\item Baum: Kann abgebaut werden um Holz zu erhalten.
+				\item Felsen: Kann abgebaut werden um Metall zu erhalten.
+				\item Lagerfeuer: Kann von einem Menschen aufgebaut werden um die umliegenden Felder wärmer zu machen. In der Nähe von Lagerfeuern können Einheiten Nahrung nutzen.
+    		\end{itemize}
+			\subsubsection {Schlitten}
+					Ein Schlitten ist ein Objekt in der Spielwelt, welches vom Spieler oder dem Computer gesteuert werden kann. Ein Schlitten besteht aus mehreren Segmenten, die wie eine Kette zusammenhängen und sich bewegen. Der Spieler kann an einem bestehenden Schlitten weitere Segmente anbauen, um den Schlitten platz zu erhöhen. Jedes Segment kann jeweils mit einer Stationen ausgestattet werden. Eine Station kann ihre Funktion nur erfüllen wenn ihr ein Mensch zugewiesen ist.\\
+					Stationen:
+					\begin{itemize}
+					    \item Werkbank: In der Werkbank können Eisschwerte,Eisäxte, Holzschwerte, Holzäxte und Verbandskästen hergestellt werden.
+					    \item Schmiede: In der Schmiede können Metallschwerte und Metaläxte hergestellt werden.
+					    \item Unterkunft: Unterkünfte erhöhen die Kapazität. Einer Unterkunft muss kein Mensch zugewiesen werden um ihre Funktion zu erfüllen.
+					    \item Küche: In der Küche kann Nahrung produziert werden.
+					    \item Hospiz: Im Hospiz kann die Gesundheit von Einheiten erhöht werden.
+					    \item Kamin: Der Kamin kann den Wärmewert des Schlittens \& der Felder in seiner Nähe erhöhen. Dafür verbraucht dieser passiv Holz. Der Kamin kann deaktiviert werden, um Holz zu sparen.
+					    \item Lager: Im Lager können Ausrüstungsobjekte gelagert werden.
+					    \item Dampfmaschine: Die Dampfmaschine wird benötigt um den Schlitten zu bewegen. Eine Dampfmaschine kann nur einmal gebaut werden.
+					\end{itemize}
+			\subsubsection{Ressourcen}
+			    Ressourcen werden zum Herstellen weiterer Objekte benötigt. Sie können durch das Abbauen/Töten von Objekten gewonnen werden. Ressourcen sind keine Objekte in der Spielwelt sondern werden dem Spieler als Zahlenwerte angezeigt.
+                \begin{itemize}
+                    \item Holz: Wird durch das Abbauen von Holz gewonnen.
+                    \item Metall: Wird durch das Abbauen von Felsen gewonnen.
+                    \item Fell: Wird durch das Töten von Tieren gewonnen.
+                    \item Leder: Wird durch das Töten von Tieren, Menschen gewonnen.
+                    \item Nahrung: Wird durch das Töten von Tieren, Menschen gewonnen. Kann in einer Küche produziert werden. Kann nur von Einheiten in der Nähe eines Schlittens oder Lagerfeuers genutzt werden.
+                \end{itemize}
+			\subsubsection {Attribute}
+			 Die Attribute werden in der folgenden Tabelle \ref{tab:tabelle}  beschrieben.
+			\begin{center}
+			
+			\begin{longtable}{ | p{2.5cm} | p{2cm} | p{10cm} | }
+			    \hline
+			    Name & Objekte & Beschreibung \\
+			    \hline
+			    Kontrollierbar & Mensch & Gibt an, ob der Mensch vom menschlichen Spieler kontrolliert werden kann. \\
+			    \hline
+				Wärme & Mensch & Gibt an wie warm die Einheit ist. Hat Einfluss auf die Geschwindigkeit mit der Hunger und Gesundheit fallen oder steigen. Kann gesteigert werden, wenn sich die Einheit in der Nähe des Kamins, oder in die Nähe eines Lagerfeuers befindet. Man verliert Wärme über Zeit. \\
+				\hline
+				Hunger & Mensch & Gibt an wie hungrig die Einheit ist. Beeinflusst die Geschwindigkeit mit der Wärme und Gesundheit steigen und fallen. Bei ausreichender Nahrung sinkt der Wert automatisch, wenn der Mensch sich in der Nähe von einem Lagerfeuer oder Schlitten befindet. \\
+				\hline
+				Gesundheit & Mensch, Tier & Gibt den Gesundheitszustand der Einheit an. Regeneriert sich ab einem gewissen Hunger und Wärme Wert. Wenn der Gesundheitswert Null erreicht, ist die Einheit tot. \\
+				\hline
+				Werkzeug & Mensch & Das Werkzeug welches der Mensch bei sich führt. Jeder Mensch kann nur ein Werkzeug haben. \\
+				\hline
+				Kleidung & Mensch & Die Kleidung, welche der Mensch trägt. Jeder Mensch kann nur eine Kleidung tragen. Verringert Wärmeverlust\\
+				\hline
+				Bauen & Mensch & Beeinflusst die Geschwindigkeit mit der die Einheit Lagerfeuer und Schlitten Upgrades baut, sowie auch die Effektivität von einer Werkbank oder Schmiede in welcher der Mensch stationiert ist. \\
+				\hline
+				Medizin & Mensch & Beeinflusst die Geschwindigkeit und den Effekt mit der die Einheit andere Einheiten mit Verbandskästen heilen kann, sowie die Effektivität von einem Hospiz oder einer Küche in der die Einheit stationiert ist. \\
+				\hline
+				Kämpfen & Mensch & Beeinflusst den Schaden und die Trefferwahrscheinlichkeit der Einheit im Kampf mit anderen Einheiten. \\
+				\hline
+				Abbauen & Mensch & Beeinflusst Geschwindigkeit und Ertrag wenn die Einheit einen Felsen oder einen Baum abbaut. \\
+				\hline
+				Friedliche Menschen & Mensch & Mensch, der vom Spieler kontorlliert werden kann \\
+				\hline
+				Feindliche Menschen & Mensch & Vom Computer gesteuerte Menschen \\
+				\hline
+				Neutrale Menschen & Mensch & Menschen, die weder friedliche noch feindliche Menschen sind. Werden von Zeit zu Zeit random auf der Map gespawnt. \\
+				\hline
+				Geschwindigkeit & Mensch, Tier & Anzahl der Felder die die Einheit in einer bestimmten Zeit zurücklegen kann. \\
+				\hline
+				Angriffs-\linebreak wahrscheinlich-\linebreak keit & Mensch, Tier & Wahrscheinlichkeit mit die Einheit andere Einheiten angreift, welche nicht zu ihrer Gruppe gehören. \\
+				\hline
+				Rudeltier & Tier & Gibt an ob das Tier in Gruppen vorkommt oder nicht. \\
+				\hline
+				Schaden & Axt, Schwert, Bogen & Wert der von der Gesundheit einer anderen Einheit bei einem Angriff abgezogen wird. \\
+				\hline
+			    Zustand & Axt, Schwert, Bogen & Zustand in dem sich die Ausrüstung befindet. Verliert Zustand über Nutzung. Ist dieser Wert bei Null geht das Objekt kaputt und verschwindet. \\
+			    \hline
+				Reichweite & Axt, Schwert, Bogen & Distanz in Feldern, über die Aktionen ausgeführt werden können. \\
+				\hline
+				Abbau-\linebreak Geschwindigkeit & Axt, Schwert & Zeit die benötigt wird um einen Baum oder Felsen abzubauen. \\
+				\hline
+				Material & Axt, Schwert, Bogen & Material aus dem die Ausrüstung besteht \\
+				\hline
+				Treffer-\linebreak
+				wahrscheinlich-\linebreak 
+				keit & Bogen & Wert der die Trefferwahrscheinlichkeit angibt. Wird durch Distanz zum Ziel beeinflusst. \\
+				\hline
+				Heilung & Verbands-\linebreak Kasten & Wert der beim Heilen einer Einheit auf dessen Gesundheit addiert wird. \\
+				\hline
+				Kleidungs-\linebreak wärme & Kleidung & Gibt dem Bonus auf Wärmeverlust durch das tragen der Kleidung an. \\
+				\hline
+				Rüstung & Kleidung & Gibt den Bonus auf genommen Schaden an durch das tragen der Kleidung. \\
+				\hline
+				Feldwärme & Spielfeld & Gibt die Wärme eines Spielfeldes an. Beeinflusst Wärmeverlust von Menschen, Kampfwerte und Abbauwerte. \\
+				\hline
+				Ertrag & Mensch, Tier, Baum, Felsen & Ressourcen die an den Spieler gehen wenn er ein Objekt abbaut oder tötet. \\
+				\hline
+				Schlittenwärme & Schlitten & Gibt an wie schnell der Wärmewert von Einheiten steigt welche sich im Schlitten befinden. \\
+				\hline
+				Kapazität & Schlitten & Gibt an wie viele Einheiten sich im Schlitten gleichzeitig befinden können. Die Kapazität einer Unterkunft ist fest, aber man kann weiter Unterkünfte 
+anbauen\\
+				\hline
+				\caption{Tabelle in der die Attribute näher erläutert werden}
+			    \label{tab:tabelle}
+			    \end{longtable}
+			
+			\end{center}
+		
+    \newpage
+	\subsection{Aktionen}
+	Die Aktionen werden in der folgenden Tabelle \ref{tab:tabelle2}  beschrieben.
+		\begin{center}
+			\begin{longtable}{ | p{1.5cm} | p{1.5cm} | p{3.5cm} | p{3.5cm} | p{3.5cm} | } 
+				\hline
+				ID/Name & Akteure & Ereignisfluss & Anfangsbedingung & Abschlussbedingung \\ 
+				\hline
+				A01: Auswählen & Spieler & 
+				1.) Der Spieler wählt eine Einheit, oder 
+				interaktives Objekt mit Links Klick aus. \newline
+				2.) Das Ziel wird Markiert. Falls es sich um einen Einheit handelt, werden Daten des der Einheit angezeigt (Gesundheit, Schaden, Name).
+				Falls der die Einheit ein Mensch ist, wird außerdem die Wärme, der Hunger und das Inventar angezeigt.
+				Handelt es sich um einen Schlitten, werden mögliche Ausbauten und Interaktionen mit bereits vorhandenen Ausbauten aufgelistet. &
+				Es muss sich eine Einheit, oder 
+				interaktives Objekt auf dem Bildschirm befinden. &
+				Das Ziel bleibt markiert, bis ein neues Ziel markiert wird. \\
+				\hline
+				A02: Zu Ziel bewegen und Interagieren & Spieler & 
+				Der Spieler wählt ein Ziel mit Rechts Klick aus. Der ausgewählte Mensch bewegt sich zum Ziel auf dem kürzesten möglichen Weg. 
+				Bewegt sich das Ziel, verfolgt der Mensch das Ziel.
+				Ist das Ziel ein leeres Feld, bewegt sich der Mensch zum Ziel. 
+				Ist das Ziel kein leeres Feld, bewegt sich der Mensch auf ein freies Feld neben dem Ziel und interagiert mit dem Ziel, abhängig von der Art des Ziels.
+				(Ausnahme: Das Ziel ist ein angreifbare Einheit und der Mensch hat einen Bogen. 
+				Wenn möglich, bleibt der Mensch mit 1 Feld Abstand vor dem Ziel stehen und führt Aktion A03e aus.) &
+				Es muss ein Mensch ausgewählt sein. Der Mensch muss sich zum Ziel bewegen können. 
+				Das Ziel ist entweder ein leeres Feld, eine Einheit oder interaktives Objekt. & 
+				Der Mensch steht beim Ziel und führt entsprechende Aktionen aus: \newline
+				Leeres Feld:
+				Stehen bleiben.
+				Felsen/Baum:
+				A03a. \newline
+				Angreifbarer Charakter:
+				A03b. \newline
+				Schlitten:
+				A03c. \newline
+				Schlucht:
+				A03d.
+				Vom Spieler kontrollierter Mensch mit nicht vollem Gesundheitswert: A03e. \\
+				\hline
+				A03a1: Abbauen manuell & Mensch der vom Spieler kontrolliert werden kann, Baum, Fels & Der Spieler wählt einen Mensch mit Fähigkeit Sammeln/Bauen und einen Baum/Felsen aus. Der Mensch baut den Felsen oder den Baum ab. Je nach ausgerüstetem Werkzeug kann das verschieden lange dauern. Das abgebaute Ressourcenobjekt verschwindet. Die Anzahl der entsprechenden Ressource wird erhöht & Der Spieler kontrolliert einen Menschen mit passender Fähigkeit. Es ist ein abbaubares Objekt in Reichweite.
+                & Ressource wurde erfolgreich abgebaut. Felsen/Baum verschwindet und ein "leeres" Spielfeld entsteht. Der Zustand von Axt wird veringert \\
+                \hline
+                A03a2: Abbauen automatisch & Mensch der vom Spieler kontrolliert werden kann, Baum, Fels & Der Mensch beginnt automatisch alle Bäume und/oder Felsen in der Umgebung abzubauen. & Einheit hat etwas manuell abgebaut. In unmittelbarer Nähe 
+befinden sich weitere Sachen zum Abbauen. & Die Aktion wird unterbrochen oder es sind keine Bäume oder Felsen mehr in der Umgebung. \\
+				\hline
+				A03b: Angriff. & Spieler, Computer & Die Einheit bleibt neben dem Ziel stehen und verursacht Schaden & Das Ziel ist noch am Leben, das Ziel ist in Reichweite.& Wenn entweder die Einheit, oder das Ziel stirbt \\
+				\hline
+				A03c: Mit Schlitten interagieren & Spieler & Öffnet das Schlitten Menü des ausgewählten Schlittens durch Linksklick. Siehe Schlitten Menü  &Der Schlitten wurde nicht bereits ausgewählt. Andernfalls bleibt das Schlitten Menü ausgewählt &Schlitten Menü wurde erfolgreich ausgewählt. \\
+				\hline
+				A03d: Brücke bauen. & Mensch der vom Spieler kontrolliert werden kann. & 
+				Der Mensch verwendet  Holz um ein “Schlucht” Feld durch ein “Plattform” Feld zu ersetzen (zählt als leeres Feld). &
+				Eine Schlucht muss neben dem Mensch sein. Es ist genug Holz vorhanden &  Brücke wurde fertig gestellt\\
+				\hline
+				A03d: Einheiten rekrutieren. & Mensch der vom Spieler kontrolliert werden kann & Der kontrollierte Mensch rekrutiert einen neutralen Mensch. & 
+				Es ist ein neutraler Mensch in der Nähe des kontrollierten Menschens. Der Schlitten muss genug Kapazität haben um den Menschen aufzunehmen. & Der andere Mensch ist nun auch ein vom Spieler kontrollierbarer Mensch. \\
+				\hline
+				A03e: Einheit heilen & Mensch der vom Spieler kontrolliert werden kann, Mensch mit nicht vollem Gesundheitswert & Der Mensch geht zu der dem zu heilenden Menschen. Der Gesundheitswert des zu heilenden Menschens wird erhöht. Der Verbandskasten verschwindet & Eine vom Spieler kontrollierter Mensch ist mit einem Verbandskasten ausgerüstet. Ein Mensch hat einen nicht kompletten Gesundheitswert. & Der zu heilende Mensch hat einen erhöhten Gesundheitswert. Der heilende Mensch ist nicht mehr mit einem Verbandskasten ausgerüstet. \\
+				\hline
+				A04: Aufbruch (Schlittenbewegen) & Schlitten & 1) Der Spieler wählt einen Schlitten mit Linksklick aus. 2) Der Spieler  wählt ein Ziel. Alle Menschen gehen zum Schlitten. Sobald sich alle Menschen im Schlitten befinden, bewegt sich dieser auf Kosten von Holz entlang der Map. Alle angehängten Schlittensegmente werden hinterher gezogen. Außerdem wird die Gefahrenstufe zurückgesetzt. &
+				Das Ziel muss erreichbar sein. & Das Ziel wurde erreicht \\
+				\hline
+				A05: Überfall & vom Computer gesteuerte Menschen & Mehrere Banditen im Momentanen Bereich gespawnt. 
+				Die Anzahl & Stärke der Einheiten hängt davon ab, wie viel Zeit im momentanen Bereich verbracht wurde.
+				2) Der Überfalls-Timer ist auf 0 & Entweder man stirbt oder man flieht
+				\\
+                \hline
+                A07: Spiel pausieren & Spieler & 1) Spieler drückt ESC \newline 2)Pausenmenü wird angezeigt & keine & Pausenmenü wird angezeigt. Spiel wird unterbrochen. \\
+                \hline
+                A08: Spiel fortsetzen & Spieler & 1)Spieler drückt ESC oder Spiel fortsetzen in Pausenmenü & Menü wird angezeigt, Spiel unterbrochen & Spiel wird fortgesetzt. \\
+                \hline
+                A09: Schlitten- Segment anbauen & Spieler, Schlitten, Mensch & Der Spieler wählt im Menü des Schlittens \"Neues Schlittensegment\" aus. Der Mensch der mit dem Schlitten interagiert, verwendet Ressourcen um ein neues Segment an den Schlitten zu bauen . & Damit das Menü des Schlittens geöffnet wird muss zuvor Aktion A03c ausgeführt werden. Es müssen genug Ressourcen vorhanden sein. Das Feld hinter der Schlittenkette muss frei sein.& Dem Schlitten wird  ein neues Segment zugefügt. \\
+                 \\
+                \hline
+                A11: Objekt herstellen & Spieler, Schlitten, Mensch & Der Spieler wählt im Menü des Schlittens das herzustellende Objekt aus. Der Mensch der mit dem Schlitten interagiert, verwendet Ressourcen um das ausgewählte Objekt herzustellen. & Damit das Menü des Schlittens geöffnet wird muss zuvor Aktion A03c ausgeführt werden. Es müssen genug Ressourcen vorhanden sein und es muss Platz geben. Der Schlitten braucht die benötigte Schlittenstation (Werkbank oder Schmiede), um das Objekt herzustellen.& Das Objekt wird hergestellt\\
+                \hline
+                A12: Nahrung produzieren & Spieler, Schlitten, Mensch & Der Spieler wählt im Menü des Schlittens \"Kochen\" aus. Der Mensch der mit dem Schlitten interagiert, verwendet Ressourcen um das ausgewählte Objekt herzustellen. & Damit das Menü des Schlittens geöffnet wird muss zuvor Aktion A03c ausgeführt werden. Es müssen genug Ressourcen vorhanden sein und es muss Platz geben. Der Schlitten braucht die benötigte Schlittenstation (Küche), um das Objekt herzustellen.& Die Nahrung wird produziert\\
+                \hline
+                A13: Wärme produzieren & Schlitten / Kamin & Der Kamin wärmt alle Einheiten in einem bestimmten Radius. Dabei verbraucht der Kamin passiv Holz. & Es gibt genügend holz zum Wärme produzieren -> Der Kamin ist aktiviert. & Es gibt nicht genügend Holz -> Der Kamin ist nicht aktiviert\\
+                 \hline
+                A14: Einheit stirbt & Tiere, friedliche Menschen, feindliche Menschen neutrale Menschen & Einheit stirbt & Gesundheitswert ist Null & Einheit verschwindet von Spiel. \\
+                % was passiert mit Items? Vershwindet und werden auf feld gespawnt?
+                \hline
+                \hline
+                A15: Wölfe verjagen & Wolf & friedliche Spieler kämpfen mit Wölfen. Nachdem man 2/3 des Rudels getötet hat(Einheit stirbt) laufen die restlichen Wölfe in einen neuen Bereich & 1) Kampf zwischen friedlichen Menschen und Wölfe 2) 2/3 der Wölfe sterben & Wölfe sind für den friedlichen Spieler nicht mehr sichtbar \\
+                % was passiert mit Items? Vershwindet und werden auf feld gespawnt?
+                \hline
+                \caption{Tabelle in der die Aktionen näher erläutert werden}
+			    \label{tab:tabelle2}
+
+
+			  \end{longtable}
+		\end{center}
+	\subsection{Achievments}
+	Verschiedene Achievments die im Spiel erreicht werden können, werden in der nachfolgenden Tabelle \ref{tab:tabelle3} aufgelistet.
+	\begin{center}
+	\begin{longtable}{ | p{3cm} | p{3cm}| }
+	\hline
+	Bezeichnung & Beschreibung\\
+	\hline
+	Wood & Ersten Baum abbauen\\
+	\hline
+	First Kill & Erster Gegner eliminert\\
+	\hline 
+	10 Kills & 10 Gegener eliminert\\
+	\hline
+	First Mission completed &  erste Mission erledigt\\
+	\hline
+	Second Mission completed & zweite Mission erledigt\\
+	\hline
+	Third Mission completed & dritte Mission erledigt\\
+	\hline
+	Victory & erstes Spiel gewonnen\\
+	\hline
+	Race to the North Pole! & Spiel unter einem bestimmten Zeitlimit durchgespielt\\
+	\hline
+    \caption{Tabelle der Achievments}
+    \label{tab:tabelle3}
+
+	\end{longtable}
+	\end{center}   
+	
+	\subsection{Musik und Sounds}
+	Es läuft eine Hintergrundmusik während des ganzen Spiels (Musik im Menü ist anders als die Musik im Spiel). Jede Aktion hat einen bestimmten Sound.\\
+	Ressourcen, die abgebaut werden, machen beim Abbau unterschiedliche Geräusche.\\
+	Wenn Menschen sich bewegen, knirscht der Schnee.\\
+	Geräusche werden mit Zufallsgeneratoren unterschiedlich gepitched.\\
+	
+	\subsection{Spielablauf}
+	Am Anfang des Spiel startet der Spieler mit einer bestimmten Anzahl an Einheiten, Gegenständen, Ressourcen und einem einfach ausgebautem Schlitten.
+	Im verlauf des Spiels muss der Spieler 4 Missionen erfüllen um das ein Kraftwerk zu erreichen welches ein Auftauen der Welt ermöglicht 
+	und somit das Spiel beendet. Während all dieser Missionen, können immer
+	wieder Gegner und andere Gefahren auftauchen die der Spieler bewältigen
+	muss. Zudem kann der Spieler auf weitere Einheiten stoßen, mit denen er sich
+	verbünden kann. Diese Ereignisse passieren zu zufälligen Zeitpunkten über
+	das Spiel verteilt und werden im laufe des Spieles schwieriger. \\
+	Das ganze Spiel läuft auf um den Schlitten herum ab. Falls sich die vom Spieler kontrollierten Menschen zu weit vom Schlitten entfernen, verlieren sie sehr schnell wärme.\\
+	Der Schlitten kann auf Kosten von Holz auf der Map fortbewegt werden. \\
+	Je länger der Schlitten sich an einem Ort befindet,\\
+	desto höher wird die lokale Gefahrenstufe (d.h. es spawnen mehr und stärkere feindliche Menschen).\\
+	Somit ist es wichtig, dass der Spieler gut einschätzt wie lange er in einem Bereich verbringen will,\\
+	damit er genug Ressourcen sammelt und trotzdem aufbricht bevor die Gefahr zu groß wird.\\
+	\begin{itemize}
+		\item[\textbf{1. Mission:}] 
+			Ein NPC wird solange in unmittelbare Nahe des Spielers gespawnt, bis der Spieler mit diesem interagiert. 
+			Bei der Interaktion wird dem Spieler erste Hinweise auf eine mögliche Rettung der Welt gegeben. Der Spieler einen bestimmten großen Baum, die "Tanne des ewigen Winters", aufsuchen,
+			um mehr zu erfahren.
+			Dafür muss er als erstes seinen Schlitten fortbewegungsfähig machen, also eine Dampfmaschine in den Schlitten einzubauen.\\
+		\item[\textbf{2. Mission:}] 
+			Sobald der Spieler seinen Schlitten fahrtüchtig gemacht hat, geht das Radio
+			an und gibt ihm einen Hinweis, wie die "Tanne des ewigen Winters" gefunden
+			werden kann und dass sich unter den Wurzeln des Baumes eine weitere Mission
+			versteckt. Die Aufgabe des Spielers ist es nun dort hinzugelangen und sich
+			eine Axt zu bauen. Wie er diese Axt baut muss er dabei selbst herausfinden.
+			Dabei erhält er durch Interagieren mit Objekten in der Umgebung Hinweise. \\
+		\item[\textbf{3. Mission:}] 
+			Mit den Infos die der Spieler unter den Wurzeln des Baumes gefunden hat,
+			erfährt er, dass er 3 Teilstücke einer Karte finden muss, die ihm den Weg
+			zum Kraftwerk offenbaren. Diese Untermissionen kann der Spieler in einer
+			beliebigen Reihenfolge erledigen. \\
+				\begin{description}
+					\item[Erster Schlüssel]
+				        Der Spieler gelangt an eine große Schlucht die er, nicht Überwinden kann. Vor der Schlucht befindet sich eine Tafel, die dem Spieler erklärt, was für Ressourcen er in der Gegend finden muss, um in seiner Schmiede eine Brücke bauen zu können. Dazu gehört eine große Menge Holz und Metall, die der Spieler in seiner Umgebung finden und verwenden kann. Wenn er alle benötigten Resourcen gesammelt hat, kann er in seiner Schmiede die Brücke fertigstellen. Hinter der Schlucht befindet sich ein Schlüssel der zum Kraftwerk führt.\\
+					\item[Zweiter Schlüssel]
+						Der zweite Schlüssel befindet sich unter einer Lawine. Die Aufgabe des Spieler besteht darin mit Hilfe verschiedener Werkzeuge, die unterschiedlich Effizient sind, bis zum Schlüssel zu gelangen.\\
+					\item[Dritter Schlüssel]
+						Auf dem Weg zu einem weiteren Schlüssel, stellt sich dem Spieler ein Rudel Wölfe in den Weg. In der Mitte dieses Rudels befindet sich der Schlüssel. Um zu ihm zu gelangen muss der Spieler mit den Werkzeugen, die er bisher gesammelt hat versuchen die Wölfe zu verjagen. \\
+					\end{description}
+		\item[\textbf{4. Mission:}]
+			Sobald der Spieler erfolgreich alle Schlüssel gefunden hat, macht er sich auf den Weg zum Kraftwerk. Vor diesem erwarten ihn allerdings einige Feinde, die er besiegen muss. Sobald er das geschafft hat, kann er die gefundenen Schlüssel verwenden um das Kraftwerk zu öffnen und die Welt aufzutauen.
+
+	\end{itemize}	
+
+	\subsection{Statistiken}
+		Alle Statistiken werden für jeden Spielstand getrennt aufgezeichnet und gespeichert. Diese Statistik ist über das Pausenmenü aufrufbar.
+		\begin{enumerate}
+			\item Spielzeit: Die Zeit gemessen in Stunden und Minuten (hh:mm) welche der Spieler im Spiel verbracht hat.
+			\item Ressourcen: Kumulative Anzahl der gesammelten Ressourcen über die Spielzeit. Verschiedene Ressourcen werden durch Farbkodierung abgetrennt.
+			\item Besiegte Gegner: Kumulative Anzahl der getöteten Gegner über die Spielzeit. Verschiedene Gegnertypen werden durch Farbkodierung abgetrennt.
+		\end{enumerate}
+		Weiter gibt es eine Statistik im Hauptmenü. Dort werden folgende Informationen gespeichert.
+		\begin{enumerate}
+		    \item Gesamtspielzeit gemessen in Stunden und Minuten(hh:mm)
+		    \item Anzahl Gewonnene Spiele
+		    \item Schnellster Sieg
+		    
+		\end{enumerate}
+		
+	\subsection{Speichern und Laden}
+		Der aktuelle Spielstand kann zu jederzeit über das Pausemenü
+		gespeichert und zu einem späteren Zeitpunkt weitergepielt werden. Beim Speichern eines Spielständes wird der aktuelle Fortschritt, die
+		aktuelle Position des Schlittens und die Anzahl und Eigenschaften der
+		einzelnen Einheiten gespeichert. \\
+		Bereits begonnen Spielstände können über das Hauptmenü wieder geladen
+		werden. Es kann aus maximal 5 Spielständen ausgewählt werden, welches Spiel geladen werden soll. Alternativ kann hier auch ein neues Spiel gestartet werden.
+\end{document}

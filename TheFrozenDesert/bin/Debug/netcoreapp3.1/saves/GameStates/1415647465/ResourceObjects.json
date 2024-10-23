@@ -1,0 +1,54 @@
+[
+{
+  "$type": "TheFrozenDesert.Storage.Models.CraftingSledgeModel, TheFrozenDesert",
+  "PreviousSledgeUuid": "none",
+  "Uuid": "6f23976c-3ace-4f19-9e0f-9682e457bde8",
+  "X": 0,
+  "Y": 8
+}
+,
+{
+  "$type": "TheFrozenDesert.Storage.Models.StockModel, TheFrozenDesert",
+  "PreviousSledgeUuid": "6f23976c-3ace-4f19-9e0f-9682e457bde8",
+  "Uuid": "42c6b157-78ad-4951-a84f-cd130fd05e74",
+  "X": 1,
+  "Y": 9
+}
+,
+{
+  "$type": "TheFrozenDesert.Storage.Models.HousingModel, TheFrozenDesert",
+  "PreviousSledgeUuid": "42c6b157-78ad-4951-a84f-cd130fd05e74",
+  "Uuid": "eb91121e-dae9-4a06-8d86-7864405996ca",
+  "X": 2,
+  "Y": 10
+}
+,
+null
+,
+null
+,
+null
+,
+null
+,
+null
+,
+null
+,
+null
+,
+null
+,
+null
+,
+null
+,
+null
+,
+null
+,
+null
+,
+null
+,
+]

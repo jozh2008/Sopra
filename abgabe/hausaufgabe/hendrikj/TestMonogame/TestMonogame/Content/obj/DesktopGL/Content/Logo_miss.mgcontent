@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/abgabe/hausaufgabe/hendrikj/TestMonogame/TestMonogame/Content/Logo_miss.wav</SourceFile>
+  <SourceTime>2021-11-05T16:05:09.2423751+01:00</SourceTime>
+  <DestFile>/mnt/44CACED1CACEBE84/Studium/Semester3/Softwarepraktikum/sopra01/abgabe/hausaufgabe/hendrikj/TestMonogame/TestMonogame/Content/bin/DesktopGL/Content/Logo_miss.xnb</DestFile>
+  <DestTime>2021-11-09T21:00:44.969151+01:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2020-08-10T18:17:54+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

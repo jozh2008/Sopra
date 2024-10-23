@@ -1,0 +1,24 @@
+\babel@toc {german}{}
+\contentsline {section}{\numberline {1}Spielkonzept}{2}%
+\contentsline {subsection}{\numberline {1.1}Zusammenfassung Spiel}{2}%
+\contentsline {subsection}{\numberline {1.2}Zentrale Spielmechanik}{2}%
+\contentsline {section}{\numberline {2}Benutzeroberfläche}{3}%
+\contentsline {subsection}{\numberline {2.1}Spielerinterface}{3}%
+\contentsline {subsection}{\numberline {2.2}Menüstruktur}{3}%
+\contentsline {section}{\numberline {3}Technische Merkmale}{4}%
+\contentsline {subsection}{\numberline {3.1}Technologien}{4}%
+\contentsline {subsection}{\numberline {3.2}Mindestvorraussetzungen}{4}%
+\contentsline {section}{\numberline {4}Spiellogik}{4}%
+\contentsline {subsection}{\numberline {4.1}Spielobjekte}{4}%
+\contentsline {subsubsection}{\numberline {4.1.1}Einheiten}{5}%
+\contentsline {subsubsection}{\numberline {4.1.2}Ausrüstung}{5}%
+\contentsline {subsubsection}{\numberline {4.1.3}Umwelt}{6}%
+\contentsline {subsubsection}{\numberline {4.1.4}Schlitten}{6}%
+\contentsline {subsubsection}{\numberline {4.1.5}Ressourcen}{7}%
+\contentsline {subsubsection}{\numberline {4.1.6}Attribute}{7}%
+\contentsline {subsection}{\numberline {4.2}Aktionen}{10}%
+\contentsline {subsection}{\numberline {4.3}Achievments}{15}%
+\contentsline {subsection}{\numberline {4.4}Musik und Sounds}{15}%
+\contentsline {subsection}{\numberline {4.5}Spielablauf}{16}%
+\contentsline {subsection}{\numberline {4.6}Statistiken}{17}%
+\contentsline {subsection}{\numberline {4.7}Speichern und Laden}{17}%

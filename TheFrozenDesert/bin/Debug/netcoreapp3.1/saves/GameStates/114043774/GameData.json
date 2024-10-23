@@ -1,0 +1,12 @@
+{
+  "$type": "TheFrozenDesert.Storage.Models.GameDataModel, TheFrozenDesert",
+  "FleischCount": 0,
+  "MetallCount": 40,
+  "WoodCount": 60,
+  "KillCount": 0,
+  "KeyCount": 0,
+  "Timer": 0.0,
+  "EnemyFleischCount": 0,
+  "EnemyMetallCount": 40,
+  "EnemyWoodCount": 60
+}
